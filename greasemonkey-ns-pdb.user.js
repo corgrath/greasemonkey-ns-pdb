@@ -2,6 +2,8 @@
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
 // @version     2
+// @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/blob/master/greasemonkey-ns-pdb.user.js     
+// @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/blob/master/greasemonkey-ns-pdb.user.js
 // @grant       none
 // ==/UserScript==
 
