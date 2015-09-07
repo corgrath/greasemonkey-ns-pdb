@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     1
+// @version     2
 // @grant       none
 // ==/UserScript==
 
