@@ -22,7 +22,7 @@ for ( var i=0; i < tdTags.length ; i++ ) {
   }
   
   if( element.innerHTML == "Christoffer Pettersson" ) {
-    element.style.background = 'red';
+    element.style.background = 'blue';
     element.style.color = "white";
   }
 
