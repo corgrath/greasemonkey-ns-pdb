@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     3
+// @version     4
 // @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @grant       none
@@ -24,7 +24,7 @@ for ( var i=0; i < tdTags.length ; i++ ) {
   }
   
   if( element.innerHTML == "Christoffer Pettersson" ) {
-    element.style.background = "red";
+    element.style.background = "blue";
     element.style.color = "white";
   }
 
