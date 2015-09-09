@@ -9,23 +9,36 @@
 
 var tdTags = document.getElementsByTagName("td");
 
+var statusGreen = [
+		"pending review",
+		"move to production",
+		"ready on production"
+	];
+
+var statusNeedAttention = [
+		"under utveckling",
+		"estimate required",
+		"netset start",
+		"new",
+		"ny"
+	];
+	
 for ( var i=0; i < tdTags.length ; i++ ) {
 
-  var element = tdTags[i];
-  var statusNeedAttention = ["under utveckling", "estimate required", "netset start", "new", "ny"];
-  var statusOkay = ["pending review", "move to production"];
-  
-  if( statusNeedAttention.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
-    element.parentNode.style.background = "#FFC1C1";
-  }
+	var element = tdTags[i];
 
-  if( statusOkay.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
-    element.parentNode.style.background = "#C0FFC0";
-  }
-  
-  if( element.innerHTML == "Christoffer Pettersson" ) {
-    element.style.background = "red";
-    element.style.color = "white";
-  }
+
+	if( statusNeedAttention.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
+		element.parentNode.style.background = "#FFC1C1";
+	}
+
+	if( statusGreen.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
+		element.parentNode.style.background = "#C0FFC0";
+	}
+
+	if( element.innerHTML == "Christoffer Pettersson" ) {
+		element.style.background = "red";
+		element.style.color = "white";
+	}
 
 }
