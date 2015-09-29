@@ -10,6 +10,7 @@
 var tdTags = document.getElementsByTagName("td");
 
 var statusGreen = [
+		"ready on test",
 		"pending review",
 		"move to production",
 		"ready on production"
