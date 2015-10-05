@@ -14,7 +14,8 @@ var statusGreen = [
 		"pending review",
 		"move to production",
 		"ready on production",
-		"discussion and support"
+		"discussion and support",
+		"move to qa"
 	];
 
 var statusNeedAttention = [
