@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     6
+// @version     7
 // @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @grant       none
@@ -14,6 +14,7 @@ var statusGreen = [
 		"pending review",
 		"move to production",
 		"ready on production"
+		"discussion and support"
 	];
 
 var statusNeedAttention = [
@@ -24,10 +25,9 @@ var statusNeedAttention = [
 		"ny"
 	];
 	
-for ( var i=0; i < tdTags.length ; i++ ) {
+for ( var i = 0; i < tdTags.length ; i++ ) {
 
 	var element = tdTags[i];
-
 
 	if( statusNeedAttention.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
 		element.parentNode.style.background = "#FFC1C1";
