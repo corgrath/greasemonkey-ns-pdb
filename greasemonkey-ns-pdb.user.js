@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     8
+// @version     9
 // @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @grant       none
@@ -15,7 +15,8 @@ var statusGreen = [
 		"move to production",
 		"ready on production",
 		"discussion and support",
-		"move to qa"
+		"move to qa",
+		"pending deploy"
 	];
 
 var statusNeedAttention = [
@@ -24,7 +25,8 @@ var statusNeedAttention = [
 		"netset start",
 		"new",
 		"ny",
-		"under development"
+		"under development",
+		"assigned"
 	];
 	
 for ( var i = 0; i < tdTags.length ; i++ ) {
