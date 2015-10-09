@@ -26,7 +26,8 @@ var statusNeedAttention = [
 		"new",
 		"ny",
 		"under development",
-		"assigned"
+		"assigned",
+		"returned to netset"
 	];
 	
 for ( var i = 0; i < tdTags.length ; i++ ) {
