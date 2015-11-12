@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     11
+// @version     12
 // @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @grant       none
@@ -17,7 +17,8 @@ var statusGreen = [
 		"discussion and support",
 		"move to qa",
 		"pending deploy",
-		"estimated"
+		"estimated",
+		"Ready on QA"
 	];
 
 var statusNeedAttention = [
