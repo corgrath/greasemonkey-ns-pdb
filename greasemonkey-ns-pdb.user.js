@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     13
+// @version     14
 // @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @grant       none
@@ -29,7 +29,8 @@ var statusNeedAttention = [
 		"ny",
 		"under development",
 		"assigned",
-		"returned to netset"
+		"returned to netset",
+		"atea internal"
 	];
 	
 for ( var i = 0; i < tdTags.length ; i++ ) {
