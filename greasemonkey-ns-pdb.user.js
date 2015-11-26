@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     14
+// @version     15
 // @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @grant       none
@@ -32,6 +32,10 @@ var statusNeedAttention = [
 		"returned to netset",
 		"atea internal"
 	];
+
+var statusIgnore = [
+	   "main task",	
+    ];
 	
 for ( var i = 0; i < tdTags.length ; i++ ) {
 
@@ -39,6 +43,7 @@ for ( var i = 0; i < tdTags.length ; i++ ) {
 
 	if( statusNeedAttention.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
 		element.parentNode.style.background = "#FFC1C1";
+		
 	}
 
 	if( statusGreen.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
@@ -48,6 +53,16 @@ for ( var i = 0; i < tdTags.length ; i++ ) {
 	if( element.innerHTML == "Christoffer Pettersson" ) {
 		element.style.background = "red";
 		element.style.color = "white";
+	}
+	
+	if( statusIgnore.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
+       element.parentNode.style.background = "lightgray";
+       for( var k = 0 ; k < element.parentNode.childNodes.length ; k++ ) {
+          if(element.parentNode.childNodes[k].style ) {
+             element.parentNode.childNodes[k].style.color = "gray";	
+             element.parentNode.childNodes[k].style.fontSize = "8px";	
+          }
+       }
 	}
 
 }
