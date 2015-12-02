@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        greasemonkey-ns-pdb
 // @include     https://projekt.netset.se/*
-// @version     15
+// @version     16
 // @downloadURL https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @updateURL   https://github.com/corgrath/greasemonkey-ns-pdb/raw/master/greasemonkey-ns-pdb.user.js
 // @grant       none
@@ -21,7 +21,7 @@ var statusGreen = [
 		"ready on qa"
 	];
 
-var statusNeedAttention = [
+var statusRed = [
 		"under utveckling",
 		"estimate required",
 		"netset start",
@@ -30,7 +30,8 @@ var statusNeedAttention = [
 		"under development",
 		"assigned",
 		"returned to netset",
-		"atea internal"
+		"atea internal",
+		"deployed to test"
 	];
 
 var statusIgnore = [
@@ -41,9 +42,8 @@ for ( var i = 0; i < tdTags.length ; i++ ) {
 
 	var element = tdTags[i];
 
-	if( statusNeedAttention.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
+	if( statusRed.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
 		element.parentNode.style.background = "#FFC1C1";
-		
 	}
 
 	if( statusGreen.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
@@ -56,13 +56,13 @@ for ( var i = 0; i < tdTags.length ; i++ ) {
 	}
 	
 	if( statusIgnore.indexOf(element.innerHTML.toLowerCase()) !== -1 ) {
-       element.parentNode.style.background = "lightgray";
-       for( var k = 0 ; k < element.parentNode.childNodes.length ; k++ ) {
-          if(element.parentNode.childNodes[k].style ) {
-             element.parentNode.childNodes[k].style.color = "gray";	
-             element.parentNode.childNodes[k].style.fontSize = "8px";	
-          }
-       }
+		element.parentNode.style.background = "lightgray";
+		for( var k = 0 ; k < element.parentNode.childNodes.length ; k++ ) {
+			if(element.parentNode.childNodes[k].style ) {
+				element.parentNode.childNodes[k].style.color = "gray";	
+             			element.parentNode.childNodes[k].style.fontSize = "8px";	
+			}
+		}
 	}
 
 }
